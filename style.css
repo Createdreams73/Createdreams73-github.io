@@ -1,0 +1,184 @@
+/* Importing the Lato Google Font (Regular and Bold) */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* Basic Style */
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    background-color: white;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+
+    /* The overflow property determines what to do if content overflows an element's box. Setting overflow to hidden will hide/clip the overflowing content */
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    /* list-style: none; */
+}
+
+.light, .dark {
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.light {
+    background-color: black;
+    color: white;
+}
+
+.dark {
+    background-color: white;
+    color: black;
+}
+
+/* Header */
+header {
+    background-color: white;
+    color: black;
+    /* Setting min-height so the height for the header section can expand if needed */
+    min-height: 70px;
+    border-bottom: 3px solid #f4f4f4;
+    padding: 5px 0;
+}
+
+header > .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header li {
+    list-style: none;
+    padding: 0 20px;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+#highlight, #current a {
+    color: black;
+    font-weight: 700;
+    /* font-weight: bold; */
+}
+
+#current a:hover, a:hover {
+    color: grey;
+    font-weight: 700;
+}
+
+/* Projects */
+#projects {
+    min-height: 400px;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    
+}
+
+#projects h1 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+#projects p {
+    font-size: 20px;
+    color: white;
+}
+
+
+
+/* Boxes */
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes > .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+
+/* About me */
+
+#about .main-col {
+    background-color: #004643;
+    padding: 20px;
+}
+
+#about > .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 50px;
+}
+
+#about .main-col {
+    color: #fff;
+}
+
+#about .sidebar {
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #0c1618;
+    color: #e6e6e6;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+img{
+    size-adjust: 30px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header > .container,
+     .container,
+    #boxes > .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    #projects.container {
+        padding-bottom: 50px;
+    }
+
+    .box {
+        width: 80%;
+    }
+
+    #about > .container,
+     container {
+        grid-template-columns: 1fr;
+    }
+}
+
